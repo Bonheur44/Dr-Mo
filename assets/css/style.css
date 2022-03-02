@@ -344,10 +344,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 38px;
 }
 
-.words-counter .form-check input {
-	box-shadow: none;
-}
-
 .words-counter .form-group input[type="file"] {
     border-color: none;
 }

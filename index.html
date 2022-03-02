@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -17,9 +17,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <!-- <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
   <!-- Template Main CSS File -->
@@ -72,25 +72,12 @@
 			<div class="container">
 	  
 				<form class="count-form" enctype="multipart/form-data">
-					<div class="form-check">
-						<input type="radio" class="form-check-input" name="type" id="byField" checked>
-						<label for="byField" class="form-check-label">Coller le texte dans le champ</label>
-					</div>
-	
-					<div class="form-check">
-						<input type="radio" class="form-check-input" name="type" id="byFile">
-						<label for="byFile" class="form-check-label">Sélectionner un fichier</label>
-					</div>
 					<div class="form-group">
 						<label for="text" class="form-label">Entrez du texte : </label>
 						<textarea class="form-control" rows="10" id="text"></textarea> 
 					</div>
-					<div class="col-lg-4 col-md-6 form-group">
-						<label for="file" class="form-label">Choisissez un fichier : </label>
-						<input type="file" class="form-control" id="file" disabled="disabled">
-					</div>
 					
-					<div class="text-center"><p id="words"></p></div>
+					<div class="text-center mt-3"><p id="words"></p></div>
 					<div class="text-center"><button class="my-2" id="lauchCount">Démarrer le comptage</button></div>
 				</form>
 	  
@@ -99,7 +86,7 @@
 	</main>
 
   <!-- Vendor JS Files -->
-  <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
