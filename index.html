@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dr Mo - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+  	<header id="header" class="fixed-top d-flex align-items-center">
+    	<div class="container d-flex align-items-center">
+      		<h1 class="logo me-auto"><a href="index.html">Dr Mo<span>.</span></a></h1>
+
+      		<nav id="navbar" class="navbar order-last order-lg-0">
+        		<ul>
+					<li><a class="nav-link guide" href="#">Guide d'utilisation</a></li>
+					<li><a class="nav-link rule" href="#">Règles de comptage</a></li>
+        		</ul>
+        		<i class="bi bi-list mobile-nav-toggle"></i>
+      		</nav><!-- .navbar -->
+			<div class="infoGuide">
+				<i class="bi bi-x"></i>
+				<ol>
+					<li><a href="#">Choisissez l'option 'Coller le texte dans le champ' si vous souhaitez utiliser le champ de saisie</a></li>
+					<li><a href="#">Choisissez l'option 'Sélectionner un fichier' si vous souhaitez lire le nombre de mots contenus dans un fichier</a></li>
+					<li><a href="#">Téléchargez des fichiers txt. Les autres types de fichiers (.docx, .pdf, etc) ne sont pas lisibles et le nombre de mots pourrait être inexact</a></li>
+					<li><a href="#">Cliquez sur le bouton 'démarrer le comtage' pour compter</a></li>
+				</ol>
+			</div>
+			<div class="rules">
+				<i class="bi bi-x"></i>
+				<ol>
+					  <li><a href="#">Un mot simple compte pour 1 mot</a></li>
+					  <li><a href="#">Les signes de ponctuation ne sont pas comptés</a></li>
+					  <li><a href="#">Un mot complexe compte pour 1 mot (ex: tire-bouchon)</a></li>
+					  <li><a href="#">Une lettre avec apostrophe compte pour 1 mot (ex: L')</a></li>
+					  <li><a href="#">Un nombre entier compte pour 1 mot</a></li>
+					  <li><a href="#">Un nombre décimal compte pour 1 mot</a></li>
+					  <li><a href="#">Les symboles monétaires ne sont pas comptés (ex: $, £)</a></li>
+					  <li><a href="#">Les symboles mathématiques ne sont pas comptés</a></li>
+					  <li><a href="#">Une adresse email compte pour 1 mot</a></li>
+					  <li><a href="#">Les balises HTML ne sont pas comptées</a></li>
+				</ol>
+			</div>
+    	</div>
+  	</header><!-- End Header -->
+
+	<main>
+		<section id="words-counter" class="words-counter">
+			<div class="container">
+	  
+				<form class="count-form" enctype="multipart/form-data">
+					<div class="form-check">
+						<input type="radio" class="form-check-input" name="type" id="byField" checked>
+						<label for="byField" class="form-check-label">Coller le texte dans le champ</label>
+					</div>
+	
+					<div class="form-check">
+						<input type="radio" class="form-check-input" name="type" id="byFile">
+						<label for="byFile" class="form-check-label">Sélectionner un fichier</label>
+					</div>
+					<div class="form-group">
+						<label for="text" class="form-label">Entrez du texte : </label>
+						<textarea class="form-control" rows="10" id="text"></textarea> 
+					</div>
+					<div class="col-lg-4 col-md-6 form-group">
+						<label for="file" class="form-label">Choisissez un fichier : </label>
+						<input type="file" class="form-control" id="file" disabled="disabled">
+					</div>
+					
+					<div class="text-center"><p id="words"></p></div>
+					<div class="text-center"><button class="my-2" id="lauchCount">Démarrer le comptage</button></div>
+				</form>
+	  
+			</div>
+		</section>
+	</main>
+
+  <!-- Vendor JS Files -->
+  <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/counter.js"></script>
+
+</body>
+
+</html>

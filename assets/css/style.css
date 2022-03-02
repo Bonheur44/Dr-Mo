@@ -1,0 +1,376 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #8600c8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7101A8;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #111111;
+}
+
+#header .logo a span {
+  color: #8600c8;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.infoGuide, .rules {
+  display: none;
+  transition: 0.5s;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: #8600c8;
+}
+
+.navbar .dropdown ol {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+
+.navbar .dropdown ol li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ol a {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.navbar .dropdown ol a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ol a:hover, .navbar .dropdown ol .active:hover, .navbar .dropdown ol li:hover > a {
+  color: #000;
+}
+
+.navbar .dropdown:hover > ol {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ol {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ol {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ol {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ol {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #111111;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.infoGuide, .rules {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 1999;
+}
+
+.infoGuide .bi-x, .rules .bi-x {
+  color: #fff;
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.infoGuide ol, .rules ol {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 20px 50px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.infoGuide a, .rules a {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.infoGuide a:hover, .infoGuide .active, .infoGuide li:hover > a, .rules a:hover, .rules .active, .rules li:hover > a {
+  color: #8600c8;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #111111;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #8600c8;
+}
+
+.navbar-mobile .getstarted {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ol {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ol li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ol a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ol a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ol a:hover, .navbar-mobile .dropdown ol .active:hover, .navbar-mobile .dropdown ol li:hover > a {
+  color: #8600c8;
+}
+
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Counter Form
+--------------------------------------------------------------*/
+.words-counter .count-form {
+	margin-top: 100px;
+    width: 100%;
+}
+
+.words-counter .count-form .form-group {
+    padding-bottom: 8px;
+}
+
+.words-counter .count-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-color: #8600c8;
+}
+
+.words-counter .form-group input:focus, .words-counter .count-form textarea:focus {
+    border-color: #7101A8;
+}
+
+.words-counter .form-group input {
+    border-radius: 0;
+    box-shadow: none;
+    height: 38px;
+}
+
+.words-counter .form-check input {
+	box-shadow: none;
+}
+
+.words-counter .form-group input[type="file"] {
+    border-color: none;
+}
+
+.words-counter .count-form textarea {
+    padding: 10px 12px;
+}
+
+.words-counter #words {
+	font-size: 25px;
+}
+
+.words-counter .count-form button[id="lauchCount"] {
+    background: #8600c8;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 0px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.words-counter .count-form button[id="lauchCount"]:hover {
+    background: #7101A8;
+}
