@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 25px;
 }
 
-.words-counter .count-form button[id="lauchCount"] {
+.words-counter .count-form button {
     background: #8600c8;
     border: 0;
     padding: 10px 35px;
@@ -367,6 +367,6 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-.words-counter .count-form button[id="lauchCount"]:hover {
+.words-counter .count-form button:hover {
     background: #7101A8;
 }

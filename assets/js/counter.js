@@ -1,9 +1,35 @@
+let copy = document.querySelector('#copy')
+let paste = document.querySelector('#paste')
 let text = document.querySelector('#text')
 let p = document.querySelector('#words')
 let lauchCount = document.querySelector('#lauchCount')
 
 let regexp = /[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ-]/
 
+/**Copier dans le presse-papiers */
+copy.addEventListener('click', function (e) {
+	e.preventDefault()
+	if (text.value.length) {
+		navigator.clipboard.writeText(text.value).then(() => {
+			copy.innerHTML = `<i class="bi bi-check-circle"></i> Copié`
+			setTimeout(function () {
+				copy.innerHTML = `<i class="bi bi-files"></i> Copier`
+			}, 2000)
+		})
+	} else {
+		alert("Veuillez saisir le texte à copier")
+	}
+})
+
+/**Coller depuis le presse-papiers */
+paste.addEventListener('click', function (e) {
+	e.preventDefault()
+	navigator.clipboard.readText().then((texte) => {
+		text.value = texte
+	})
+})
+
+/**Démarrer le comptage des mots */
 lauchCount.addEventListener('click', function (e) {
 	e.preventDefault()
 	show(count(text.value))
