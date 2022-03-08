@@ -82,6 +82,7 @@ text.addEventListener('click', function () {
 /**Lanceur d'analyse */
 document.querySelector('#analyze').addEventListener('click', function (e) {
 	e.preventDefault()
+	modif.innerHTML = ''
 	result.style.display = 'block'
 	text.setAttribute('readonly', 'readonly')
 	fetch('https://api.textgears.com/grammar?key=wyaPWaqVZdy55zOY&text='+ text.value.replace(/\s/g, ' ') +'&language=fr-FR')
@@ -113,7 +114,6 @@ document.querySelector('#analyze').addEventListener('click', function (e) {
 					tab.push(i.offset)
 				}
 				let i = 0, n = 0
-				modif.innerHTML = ''
 				while (i < text.value.length) {
 					let j = tab.indexOf(i)
 					if (j !== -1) {
@@ -164,6 +164,7 @@ document.querySelector('#analyze').addEventListener('click', function (e) {
 				})
 			}
 		}
+		modif.innerHTML = text.value
 	})
 })
 
