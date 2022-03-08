@@ -85,7 +85,7 @@ document.querySelector('#analyze').addEventListener('click', function (e) {
 	modif.innerHTML = ''
 	result.style.display = 'block'
 	text.setAttribute('readonly', 'readonly')
-	fetch('https://api.textgears.com/grammar?key=wyaPWaqVZdy55zOY&text='+ text.value.replace(/\s/g, ' ') +'&language=fr-FR')
+	fetch('https://api.textgears.com/grammar?key=wyaPWaqVZdy55zOY&text='+ text.value.replace(/\n/g, ` `) +'&language=fr-FR')
 	.then(function (data) {
 		return data.json()
 	}).then(function (res) {
@@ -164,7 +164,6 @@ document.querySelector('#analyze').addEventListener('click', function (e) {
 				})
 			}
 		}
-		modif.innerHTML = text.value
 	})
 })
 
