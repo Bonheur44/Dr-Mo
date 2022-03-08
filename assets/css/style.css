@@ -357,6 +357,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #8600c8;
     border: 0;
     padding: 10px 35px;
+    margin-bottom: 15px;
     color: #fff;
     transition: 0.4s;
     border-radius: 0px;
