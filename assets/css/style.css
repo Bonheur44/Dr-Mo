@@ -332,6 +332,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
     font-size: 14px;
     border-color: #8600c8;
+    padding: 10px 12px;
 }
 
 .words-counter .form-group input:focus, .words-counter .count-form textarea:focus {
@@ -346,10 +347,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .words-counter .form-group input[type="file"] {
     border-color: none;
-}
-
-.words-counter .count-form textarea {
-    padding: 10px 12px;
 }
 
 .words-counter #words {
@@ -369,4 +366,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .words-counter .count-form button:hover {
     background: #7101A8;
+}
+
+/*Div*/
+.result {
+  display: none;
+}
+
+.options {
+  margin-top: 10px;
+  border: 1px none #8600c8;
+  padding-left: 30px;
+}
+
+.scrollers {
+  margin-right: 15px;
+  word-spacing: 10px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+#modif {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border: 1px solid #8600c8;
+  padding: 10px 12px;
+  overflow-y: scroll;
+  width: 100%;
+  height: 232px;
+  white-space: pre;
 }
