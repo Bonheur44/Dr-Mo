@@ -1,105 +1,136 @@
 <!DOCTYPE html>
-<html lang=fr>
+<html lang="fr">
+
 <head>
-<meta charset=utf-8>
-<meta content="width=device-width, initial-scale=1.0" name=viewport>
-<title>Dr Mo - Index</title>
-<meta content name=description>
-<meta content name=keywords>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel=stylesheet>
-<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css>
-<link href=assets/css/style.css rel=stylesheet>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dr Mo - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-<header id=header class="fixed-top d-flex align-items-center">
-<div class="container d-flex align-items-center">
-<h1 class="logo me-auto"><a href=index.html>Dr Mo<span>.</span></a></h1>
-<nav id=navbar class="navbar order-last order-lg-0">
-<ul>
-<li><a class="nav-link guide" href=#>Guide d'utilisation</a></li>
-<li><a class="nav-link rule" href=#>Règles de comptage</a></li>
-</ul>
-<i class="bi bi-list mobile-nav-toggle"></i>
-</nav>
-<div class=infoGuide>
-<i class="bi bi-x"></i>
-<ol>
-<li><a href=#>Collez le texte dans le champ de saisie</a></li>
-<li><a href=#>Cliquez sur le bouton 'Démarrer le comptage' pour compter le nombre de mots de votre texte</a></li>
-<li><a href=#>Cliquez sur 'Copier' pour copier le texte et 'Coller' pour coller le texte dans le champ de saisie</a></li>
-<li><a href=#>Cliquez sur 'Analyser' pour lancer l'analyse grammaticale et orthographique. Un deuxième bloc apparaîtra en dessous du champ de saisie</a></li>
-<li><a href=#>Les parties erronées seront coloriées. Cliquez dessus pour avoir des suggestions ainsi qu'une explication sur l'erreur</a></li>
-<li><a href=#>Cliquez sur une suggestion pour remplacer le mot erroné par cette dernière</a></li>
-<li><a href=#>Utilisez les boutons de direction pour vous déplacer d'une faute soulignée à une autre</a></li>
-<li><a href=#>Une fois terminé les corrections, cliquez sur le bouton 'Valider' pour mettre à jour le champ de saisie</a></li>
-<li><a href=#>Veuillez toujours valider les changements du deuxième bloc avant de continuer la saisie</a></li>
-<li><a href=#>Le nombre d'analyses possibles n'est pas illimité. Assurez-vous de terminer l'élaboration de votre texte avant de lancer l'analyse</a></li>
-</ol>
-</div>
-<div class=rules>
-<i class="bi bi-x"></i>
-<ol>
-<li><a href=#>Un mot simple compte pour 1 mot</a></li>
-<li><a href=#>Les signes de ponctuation ne sont pas comptés</a></li>
-<li><a href=#>Un mot complexe compte pour 1 mot (ex: tire-bouchon)</a></li>
-<li><a href=#>Une lettre avec apostrophe compte pour 1 mot (ex: L')</a></li>
-<li><a href=#>Un nombre entier compte pour 1 mot</a></li>
-<li><a href=#>Un nombre décimal compte pour 1 mot</a></li>
-<li><a href=#>Les symboles monétaires ne sont pas comptés (ex: $, £)</a></li>
-<li><a href=#>Les symboles mathématiques ne sont pas comptés</a></li>
-<li><a href=#>Une adresse email compte pour 1 mot</a></li>
-<li><a href=#>Les balises HTML ne sont pas comptées</a></li>
-</ol>
-</div>
-</div>
-</header>
-<main>
-<section id=words-counter class=words-counter>
-<div class=container>
-<form class=count-form enctype=multipart/form-data>
-<div class=text-center>
-<button id=copy><i class="bi bi-files"></i> Copier</button>
-<button id=paste><i class="bi bi-stickies"></i> Coller</button>
-</div>
-<div class=form-group>
-<label for=text class=form-label>Entrez du texte : </label>
-<textarea class=form-control rows=10 id=text></textarea>
-<div class=result>
-<label class=mt-4>Résultat :</label>
-<div id=modif></div>
-<div class="options d-flex justify-content-end align-items-center">
-<div class=scrollers>
-<a href id=toUp class="bi bi-chevron-up"></a>
-<a href id=toDown class="bi bi-chevron-down"></a>
-</div>
-<button id=validate>Valider</button>
-</div>
-</div>
-</div>
-<div class="text-center mt-3"><p id=words></p></div>
-<div class="text-center my-2">
-<button id=lauchCount><i class="bi bi-calculator"></i> Compter</button>
-<button id=analyze><i class="bi bi-journal-text"></i> Analyser</button>
-</div>
-</form>
-</div>
-</section>
-<div class="modal fade" id=exampleModal tabindex=-1 aria-labelledby=exampleModalLabel aria-hidden=true>
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-<div class=modal-content>
-<div class=modal-header>
-<h6 class=modal-title id=exampleModalLabel></h6>
-<button type=button class=btn-close data-bs-dismiss=modal aria-label=Close></button>
-</div>
-<div class=modal-body>
-</div>
-</div>
-</div>
-</div>
-</main>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js integrity=sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM crossorigin=anonymous></script>
-<script src=assets/js/main.js></script>
-<script src=assets/js/counter.js></script>
+
+	<!-- ======= Header ======= -->
+  	<header id="header" class="fixed-top d-flex align-items-center">
+    	<div class="container d-flex align-items-center">
+      		<h1 class="logo me-auto"><a href="index.html">Dr Mo<span>.</span></a></h1>
+
+      		<nav id="navbar" class="navbar order-last order-lg-0">
+        		<ul>
+					<li><a class="nav-link guide" href="#">Guide d'utilisation</a></li>
+					<li><a class="nav-link rule" href="#">Règles de comptage</a></li>
+        		</ul>
+        		<i class="bi bi-list mobile-nav-toggle"></i>
+      		</nav><!-- .navbar -->
+			<div class="infoGuide">
+				<i class="bi bi-x"></i>
+				<ol>
+					<li><a href="#">Collez le texte dans le champ de saisie</a></li>
+					<li><a href="#">Cliquez sur le bouton 'Démarrer le comptage' pour compter le nombre de mots de votre texte</a></li>
+					<li><a href="#">Cliquez sur 'Copier' pour copier le texte et 'Coller' pour coller le texte dans le champ de saisie</a></li>
+					<li><a href="#">Cliquez sur 'Analyser' pour lancer l'analyse grammaticale et orthographique. Un deuxième bloc apparaîtra en dessous du champ de saisie</a></li>
+					<li><a href="#">Les parties erronées seront coloriées. Cliquez dessus pour avoir des suggestions ainsi qu'une explication sur l'erreur</a></li>
+					<li><a href="#">Cliquez sur une suggestion pour remplacer le mot erroné par cette dernière</a></li>
+					<li><a href="#">Utilisez les boutons de direction pour vous déplacer d'une faute soulignée à une autre</a></li>
+					<li><a href="#">Une fois terminé les corrections, cliquez sur le bouton 'Valider' pour mettre à jour le champ de saisie</a></li>
+					<li><a href="#">Veuillez toujours valider les changements du deuxième bloc avant de continuer la saisie</a></li>
+					<li><a href="#">Le nombre d'analyses possibles n'est pas illimité. Assurez-vous de terminer l'élaboration de votre texte avant de lancer l'analyse</a></li>
+				</ol>
+			</div>
+			<div class="rules">
+				<i class="bi bi-x"></i>
+				<ol>
+					  <li><a href="#">Un mot simple compte pour 1 mot</a></li>
+					  <li><a href="#">Les signes de ponctuation ne sont pas comptés</a></li>
+					  <li><a href="#">Un mot complexe compte pour 1 mot (ex: tire-bouchon)</a></li>
+					  <li><a href="#">Une lettre avec apostrophe compte pour 1 mot (ex: L')</a></li>
+					  <li><a href="#">Un nombre entier compte pour 1 mot</a></li>
+					  <li><a href="#">Un nombre décimal compte pour 1 mot</a></li>
+					  <li><a href="#">Les symboles monétaires ne sont pas comptés (ex: $, £)</a></li>
+					  <li><a href="#">Les symboles mathématiques ne sont pas comptés</a></li>
+					  <li><a href="#">Une adresse email compte pour 1 mot</a></li>
+					  <li><a href="#">Les balises HTML ne sont pas comptées</a></li>
+				</ol>
+			</div>
+    	</div>
+  	</header><!-- End Header -->
+
+	<main>
+		<section id="words-counter" class="words-counter">
+			<div class="container">
+	  
+				<form class="count-form" enctype="multipart/form-data">
+					<div class="text-center">
+						<button id="copy"><i class="bi bi-files"></i> Copier</button>
+						<button id="paste"><i class="bi bi-stickies"></i> Coller</button>
+					</div>
+					<div class="form-group">
+						<label for="text" class="form-label">Entrez du texte : </label>
+						<textarea class="form-control" rows="10" id="text"></textarea>
+
+						<div class="result">
+							<label class="mt-4">Résultat :</label>
+							<div id="modif"></div>
+							<div class="options d-flex justify-content-end align-items-center">
+								<div class="scrollers">
+									<a href="" id="toUp" class="bi bi-chevron-up"></a>
+									<a href="" id="toDown" class="bi bi-chevron-down"></a>
+								</div>
+								<button id="validate">Valider</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="text-center mt-3"><p id="words"></p></div>
+					<div class="text-center my-2">
+						<button id="lauchCount"><i class="bi bi-calculator"></i> Compter</button>
+						<button id="analyze"><i class="bi bi-journal-text"></i> Analyser</button>
+					</div>
+				</form>
+	  
+			</div>
+		</section>
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h6 class="modal-title" id="exampleModalLabel"></h6>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</main>
+
+  <!-- Vendor JS Files -->
+  <!-- <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/counter.js"></script>
+
 </body>
+
 </html>
